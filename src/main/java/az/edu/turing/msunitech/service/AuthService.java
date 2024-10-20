@@ -8,7 +8,7 @@ import az.edu.turing.msunitech.dto.response.RegisterResponse;
 import org.springframework.http.ResponseEntity;
 
 public interface AuthService {
-    ResponseEntity<RegisterResponse> registerAccount(Long userId, RegisterRequest registerRequest);
+    ResponseEntity<RegisterResponse> registerAccount(RegisterRequest registerRequest);
 
     ResponseEntity<LoginResponse> loginUser(LoginRequest loginRequest);
 

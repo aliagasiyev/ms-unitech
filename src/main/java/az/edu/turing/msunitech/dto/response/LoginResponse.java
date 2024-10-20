@@ -1,17 +1,24 @@
 package az.edu.turing.msunitech.dto.response;
 
 import jakarta.validation.constraints.NotBlank;
-import lombok.Builder;
+import lombok.*;
 
 @Builder
-public record LoginResponse(
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+public class LoginResponse {
         @NotBlank
-        String message,
+        private String message;
         @NotBlank
-        String username,
+        private String username;
         @NotBlank
-        String accessToken,
+        private  String accessToken;
         @NotBlank
-        String refreshToken
-) {
+        private String refreshToken;
+
+        public LoginResponse(String message) {
+                this.message = message;
+        }
 }
